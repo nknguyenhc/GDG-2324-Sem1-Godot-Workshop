@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqvyx11s8ht6m"]
+
+[ext_resource type="Texture2D" uid="uid://dwo2fdlo7icij" path="res://assets/icon.svg" id="1_ncfnv"]
+[ext_resource type="Script" path="res://enemies/gun.gd" id="1_ydkqp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pgngx"]
+
+[node name="Gun" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_ydkqp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.18069, 6.18069)
+shape = SubResource("RectangleShape2D_pgngx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ncfnv")
+
+[node name="BulletTimer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[node name="MovementTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="BulletTimer" to="." method="_on_bullet_timer_timeout"]
+[connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]
