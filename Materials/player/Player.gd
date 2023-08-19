@@ -6,6 +6,11 @@ const acceleration = 80
 
 var health = 100
 
+const Attack = preload("res://player/Damage.tscn")
+var is_attacking = false
+var attack_instance
+const attack_offset = 100
+
 
 func _ready():
 	$AnimatedSprite2D.play("idle-left")
@@ -26,7 +31,7 @@ func _process(delta):
 	)
 	
 	if Input.is_action_just_pressed("ui_jump") and is_on_floor():
-		velocity.y = -1300
+		velocity.y = -1500
 	
 	move_and_slide()
 	if velocity.x > 0:
@@ -41,14 +46,31 @@ func _process(delta):
 		$AnimatedSprite2D.play("run-left")
 		is_right = false
 	
+	if not is_attacking:
+		if Input.is_action_just_pressed("attack"):
+			attack()
+	else:
+		attack_instance.position = Vector2(attack_offset if is_right else -attack_offset, 0)
+	
 	if health < 0:
 		die()
 
 
 func take_damage(damage):
 	health -= damage
-	print("take damage")
+
+
+func attack():
+	is_attacking = true
+	attack_instance = Attack.instantiate()
+	add_child(attack_instance)
+	$AttackTimer.start()
 
 
 func die():
 	queue_free()
+
+
+func _on_attack_timer_timeout():
+	attack_instance.queue_free()
+	is_attacking = false

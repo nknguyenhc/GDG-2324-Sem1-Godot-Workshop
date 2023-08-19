@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bqmuxtqj7kg03"]
+[gd_scene load_steps=6 format=3 uid="uid://bqmuxtqj7kg03"]
 
-[ext_resource type="PackedScene" uid="uid://c1n3pcc0gyv0i" path="res://player/player.tscn" id="1_vcm2j"]
+[ext_resource type="PackedScene" uid="uid://86atf7nxujey" path="res://player/player.tscn" id="1_vcm2j"]
 [ext_resource type="PackedScene" uid="uid://csfxsiq2d3r4t" path="res://map/plank.tscn" id="2_egy4t"]
 [ext_resource type="PackedScene" uid="uid://cqvyx11s8ht6m" path="res://enemies/gun.tscn" id="3_vuvh5"]
 [ext_resource type="PackedScene" uid="uid://djp4mhdi68lm7" path="res://UI/player-healthbar.tscn" id="4_0ae8a"]
+[ext_resource type="PackedScene" uid="uid://cwtbssxuomvt6" path="res://UI/enemy-healthbar.tscn" id="5_rlv8d"]
 
 [node name="Game" type="Node"]
 
@@ -20,3 +21,9 @@ offset_left = 25.0
 offset_top = 23.0
 offset_right = 269.0
 offset_bottom = 50.0
+
+[node name="PlayerHealthbar2" parent="." instance=ExtResource("5_rlv8d")]
+offset_left = 673.0
+offset_top = 20.0
+offset_right = 917.0
+offset_bottom = 47.0
