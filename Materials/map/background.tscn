@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://n27buuxsuo5k"]
+
+[ext_resource type="Script" path="res://map/background.gd" id="1_rfiu8"]
+[ext_resource type="PackedScene" uid="uid://dp8eit826s4ul" path="res://map/background-image.tscn" id="2_v4lt0"]
+
+[node name="Background" type="Node2D"]
+script = ExtResource("1_rfiu8")
+
+[node name="BackgroundImage" parent="." instance=ExtResource("2_v4lt0")]
+position = Vector2(-28, 0)
+scale = Vector2(1.00575, 1.00575)
