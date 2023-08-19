@@ -1,0 +1,14 @@
+Scene:
+- Put each object into a separate scene
+- Folder organisation
+Enemy & Timer:
+- Just a CharacterBody
+- Timers for automation
+- Event: timeout
+Bullets:
+- Area2D
+- Class instantiation
+- Event: body_entered
+UI:
+- Healthbar & value pegged to player's health
+- Customise theme
