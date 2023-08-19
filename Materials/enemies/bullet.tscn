@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://c2eukfr7ewcwd"]
 
-[ext_resource type="Texture2D" uid="uid://cqebrvf6oyik3" path="res://assets/bullets.png" id="1_2gl5e"]
+[ext_resource type="Texture2D" path="res://assets/bullets.png" id="1_2gl5e"]
 [ext_resource type="Script" path="res://enemies/bullet.gd" id="1_he38l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2617"]
@@ -53,4 +53,10 @@ shape = SubResource("CircleShape2D_s2617")
 scale = Vector2(2.77874, 2.77874)
 sprite_frames = SubResource("SpriteFrames_wrmty")
 
+[node name="ExistenceTimer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="ExistenceTimer" to="." method="_on_existence_timer_timeout"]

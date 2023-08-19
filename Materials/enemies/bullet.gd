@@ -14,3 +14,7 @@ func _process(delta):
 
 func _on_body_entered(body):
 	body.take_damage(DAMAGE)
+
+
+func _on_existence_timer_timeout():
+	queue_free()

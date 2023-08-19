@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqmuxtqj7kg03"]
 
-[ext_resource type="PackedScene" uid="uid://86atf7nxujey" path="res://player/player.tscn" id="1_vcm2j"]
+[ext_resource type="PackedScene" uid="uid://c1n3pcc0gyv0i" path="res://player/player.tscn" id="1_vcm2j"]
 [ext_resource type="PackedScene" uid="uid://csfxsiq2d3r4t" path="res://map/plank.tscn" id="2_egy4t"]
 [ext_resource type="PackedScene" uid="uid://cqvyx11s8ht6m" path="res://enemies/gun.tscn" id="3_vuvh5"]
 [ext_resource type="PackedScene" uid="uid://djp4mhdi68lm7" path="res://UI/player-healthbar.tscn" id="4_0ae8a"]
-[ext_resource type="PackedScene" uid="uid://cwtbssxuomvt6" path="res://UI/enemy-healthbar.tscn" id="5_rlv8d"]
-[ext_resource type="PackedScene" uid="uid://b7beegtrx63vk" path="res://map/map.tscn" id="6_j2815"]
-[ext_resource type="PackedScene" uid="uid://n27buuxsuo5k" path="res://map/background.tscn" id="7_t3wqf"]
+[ext_resource type="PackedScene" path="res://UI/enemy-healthbar.tscn" id="5_rlv8d"]
+[ext_resource type="PackedScene" path="res://map/map.tscn" id="6_j2815"]
+[ext_resource type="PackedScene" path="res://map/background.tscn" id="7_t3wqf"]
 
 [node name="Game" type="Node"]
 

@@ -9,9 +9,15 @@ var is_up = true
 
 var health = 100
 
+var player
+
 
 func take_damage(damage):
 	health -= damage
+
+
+func _ready():
+	player = get_parent().get_node("Player")
 
 
 func _process(delta):
@@ -29,6 +35,7 @@ func _on_movement_timer_timeout():
 
 
 func _on_fire_timer_timeout():
-	var fire = Fire.instantiate()
-	fire.position = get_parent().get_node("Player").position
-	get_parent().add_child(fire)
+	if weakref(player).get_ref():
+		var fire = Fire.instantiate()
+		fire.position = player.position
+		get_parent().add_child(fire)

@@ -1,0 +1,8 @@
+Background
+- Take note of scale
+- Instantiating scene after scene
+Object clean-up
+- Have a look at scene tree during game play
+- Timer to queue free bullets & old scenes
+Restart
+- Root node above game node

@@ -68,6 +68,7 @@ func attack():
 
 
 func die():
+	get_parent().get_parent().restart()
 	queue_free()
 
 
