@@ -1,0 +1,7 @@
+Map & tiles
+- Add assets
+- Add tiles to map
+- Add collision shape
+AnimationPlayer
+- Control out-of-place animation frames
+- Key frames
