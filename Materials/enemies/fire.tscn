@@ -1,0 +1,134 @@
+[gd_scene load_steps=21 format=3 uid="uid://xr53caacmgbr"]
+
+[ext_resource type="Script" path="res://enemies/fire.gd" id="1_4qcyv"]
+[ext_resource type="Texture2D" uid="uid://bv4dgo3pgmfjq" path="res://assets/fire/Guided Arrow - Effect #2 (1).png" id="1_ih3cr"]
+[ext_resource type="Texture2D" uid="uid://c1a31ey7lnqi6" path="res://assets/fire/Guided Arrow - Effect #2 (2).png" id="2_gtgao"]
+[ext_resource type="Texture2D" uid="uid://dkic4yq72xs5" path="res://assets/fire/Guided Arrow - Effect #2 (3).png" id="3_ddvik"]
+[ext_resource type="Texture2D" uid="uid://cybynuv7pp5sn" path="res://assets/fire/Guided Arrow - Effect #2 (4).png" id="4_ig03t"]
+[ext_resource type="Texture2D" uid="uid://dbmspsv36ncmy" path="res://assets/fire/Guided Arrow - Effect #2 (5).png" id="5_x3t0f"]
+[ext_resource type="Texture2D" uid="uid://dnti3l8thy8vo" path="res://assets/fire/Guided Arrow - Effect #2 (6).png" id="6_uj223"]
+[ext_resource type="Texture2D" uid="uid://bbmubyvdlsbr8" path="res://assets/fire/Guided Arrow - Effect #2 (7).png" id="7_81b2d"]
+[ext_resource type="Texture2D" uid="uid://vwn4foheq20j" path="res://assets/fire/Guided Arrow - Effect #2 (8).png" id="8_p10od"]
+[ext_resource type="Texture2D" uid="uid://ck8dwhe50l71e" path="res://assets/fire/Guided Arrow - Effect #2 (9).png" id="9_pynb8"]
+[ext_resource type="Texture2D" uid="uid://bxonr1sb86cwu" path="res://assets/fire/Guided Arrow - Effect #2 (10).png" id="10_gvjcu"]
+[ext_resource type="Texture2D" uid="uid://b1u75cn8jiu0b" path="res://assets/fire/Guided Arrow - Effect #2 (11).png" id="11_gf2sb"]
+[ext_resource type="Texture2D" uid="uid://egto8u1rfh6l" path="res://assets/fire/Guided Arrow - Effect #2 (12).png" id="12_ehr72"]
+[ext_resource type="Texture2D" uid="uid://cagq2tgh2svx0" path="res://assets/fire/Guided Arrow - Effect #2 (13).png" id="13_hbmup"]
+[ext_resource type="Texture2D" uid="uid://cp1tid402nyfq" path="res://assets/fire/Guided Arrow - Effect #2 (14).png" id="14_g3u1g"]
+[ext_resource type="Texture2D" uid="uid://bpo8oydd5uccg" path="res://assets/fire/Guided Arrow - Effect #2 (15).png" id="15_qtnmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_klc5w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lkr5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ih3cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gtgao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_ddvik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ig03t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_x3t0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uj223")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_81b2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p10od")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_pynb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gvjcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_gf2sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ehr72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_hbmup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_g3u1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_qtnmv")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Animation" id="Animation_8lkav"]
+resource_name = "fire"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 11), Vector2(0, 14), Vector2(0, 6), Vector2(0, -30), Vector2(20, -30), Vector2(9, -25), Vector2(4, -22), Vector2(1, -19), Vector2(4, -22), Vector2(-17, -39), Vector2(1, -36), Vector2(-6, -28), Vector2(-2, -2), Vector2(-4, -6)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h0d6j"]
+_data = {
+"fire": SubResource("Animation_8lkav")
+}
+
+[node name="fire" type="Area2D"]
+collision_layer = 0
+script = ExtResource("1_4qcyv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(6.40333, 6.40333)
+shape = SubResource("RectangleShape2D_klc5w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, -6)
+sprite_frames = SubResource("SpriteFrames_lkr5y")
+frame = 14
+
+[node name="DamageTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_h0d6j")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="DamageTimer" to="." method="_on_damage_timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

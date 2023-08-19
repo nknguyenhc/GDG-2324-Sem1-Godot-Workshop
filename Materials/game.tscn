@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqmuxtqj7kg03"]
+[gd_scene load_steps=7 format=3 uid="uid://bqmuxtqj7kg03"]
 
 [ext_resource type="PackedScene" uid="uid://86atf7nxujey" path="res://player/player.tscn" id="1_vcm2j"]
 [ext_resource type="PackedScene" uid="uid://csfxsiq2d3r4t" path="res://map/plank.tscn" id="2_egy4t"]
 [ext_resource type="PackedScene" uid="uid://cqvyx11s8ht6m" path="res://enemies/gun.tscn" id="3_vuvh5"]
 [ext_resource type="PackedScene" uid="uid://djp4mhdi68lm7" path="res://UI/player-healthbar.tscn" id="4_0ae8a"]
 [ext_resource type="PackedScene" uid="uid://cwtbssxuomvt6" path="res://UI/enemy-healthbar.tscn" id="5_rlv8d"]
+[ext_resource type="PackedScene" uid="uid://b7beegtrx63vk" path="res://map/map.tscn" id="6_j2815"]
 
 [node name="Game" type="Node"]
 
@@ -27,3 +28,7 @@ offset_left = 673.0
 offset_top = 20.0
 offset_right = 917.0
 offset_bottom = 47.0
+
+[node name="map" parent="." instance=ExtResource("6_j2815")]
+position = Vector2(54, -3.00001)
+scale = Vector2(0.93307, 0.93307)

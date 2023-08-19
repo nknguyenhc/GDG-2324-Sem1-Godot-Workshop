@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 
 const Bullet = preload("res://enemies/bullet.tscn")
+const Fire = preload("res://enemies/fire.tscn")
 
-const speed = 5
+const speed = 8
 var is_up = true
 
 var health = 100
@@ -25,3 +26,9 @@ func _on_bullet_timer_timeout():
 
 func _on_movement_timer_timeout():
 	is_up = !is_up
+
+
+func _on_fire_timer_timeout():
+	var fire = Fire.instantiate()
+	fire.position = get_parent().get_node("Player").position
+	get_parent().add_child(fire)
