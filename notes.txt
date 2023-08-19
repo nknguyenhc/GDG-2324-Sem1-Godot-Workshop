@@ -1,0 +1,21 @@
+UI:
+- 2D & Script panels
+- File system
+- Node system
+- Node inspector
+- Main panel
+Node system:
+- Each object is represented by a node
+- Child nodes for supporting functionalities, esp collision shapes
+- Must have a root node
+Assets:
+- Should be put in a separate folder
+- Introduce itch.io assets page
+Static objects:
+- StaticBody must have collision shape
+- Sprite to show the object in real game play
+Player objects:
+- CharacterBody must ahve collision shape
+- Can use script to control the player
+- Basic control: Move around
+- Collision & mask layer: to determine collision
